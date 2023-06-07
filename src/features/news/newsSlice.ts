@@ -78,7 +78,7 @@ export const newsSlice = createSlice({
         }
         state.loading = false;
       })
-      .addCase(fetchArticles.rejected, (state, action) => {
+      .addCase(fetchArticles.rejected, (state) => {
         state.loading = false;
         state.entities = [];
         state.error = {

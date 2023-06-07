@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import {
   fetchArticles,
   selectArticles,
-  selectError,
   selectLoading,
 } from './newsSlice';
 import {selectToken} from "../auth/authSlice";

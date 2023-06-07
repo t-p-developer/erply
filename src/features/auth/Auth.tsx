@@ -5,11 +5,9 @@ import {
   selectToken,
   setCredentials,
   selectLoading,
-  selectError,
 } from './authSlice';
 
 export function Auth() {
-  const token = useAppSelector(selectToken);
   const loading = useAppSelector(selectLoading);
   const dispatch = useAppDispatch();
 

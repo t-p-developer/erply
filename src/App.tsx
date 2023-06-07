@@ -34,6 +34,12 @@ function App() {
           <p>{authError.message}</p>
         </div>
       )}
+      {newsError && (
+        <div className="error-container">
+            <h3>{newsError.code}</h3>
+            <p>{newsError.message}</p>
+        </div>
+      )}
     </div>
   );
 }

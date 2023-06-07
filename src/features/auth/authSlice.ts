@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import type { RootState } from '../../app/store';
-import { newsSlice } from '../news/newsSlice';
 
 type Error = {
   code: string;
@@ -29,7 +28,7 @@ export interface LoginRequest {
 
 export const setCredentials = createAsyncThunk(
   'auth/fetchArticles',
-  async ({ email, token }: LoginRequest) => {
+  async ({ token }: LoginRequest) => {
     try {
       const response = await fetch(
         `https://newsapi.org/v2/everything?q=keyword&apiKey=${token}`,
@@ -72,7 +71,7 @@ const authSlice = createSlice({
         }
         state.loading = false;
       })
-      .addCase(setCredentials.rejected, (state, action) => {
+      .addCase(setCredentials.rejected, (state) => {
         state.loading = false;
         state.email = '';
         state.token = '';
