@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import {
   LoginRequest,
-  selectToken,
   setCredentials,
   selectLoading,
 } from './authSlice';
