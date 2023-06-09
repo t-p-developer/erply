@@ -622,20 +622,20 @@ button {
 }
 
 .error-container {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    border-radius: 1.25rem;
-    background-color: #FFFFFF;
-    --tw-bg-opacity: 1;
-    color: rgb(21 16 48 / var(--tw-bg-opacity));
-    padding: 1.25rem;
-    box-shadow: 0 10px 25px rgba(21, 16, 48, 0.3);
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 1.25rem;
+  background-color: #ffffff;
+  --tw-bg-opacity: 1;
+  color: rgb(21 16 48 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px rgba(21, 16, 48, 0.3);
 }
 .error-container h3 {
-    --tw-bg-opacity: 1;
-    color: rgb(21 16 48 / var(--tw-bg-opacity));
-    font-weight: 900;
-    font-size: 2rem;
-    line-height: 1.57;
+  --tw-bg-opacity: 1;
+  color: rgb(21 16 48 / var(--tw-bg-opacity));
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.57;
 }

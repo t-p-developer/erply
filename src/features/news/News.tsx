@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react';
 
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import {
-  fetchArticles,
-  selectArticles,
-  selectLoading,
-} from './newsSlice';
-import {selectToken} from "../auth/authSlice";
+import { fetchArticles, selectArticles, selectLoading } from './newsSlice';
+import { selectToken } from '../auth/authSlice';
 
 export function News() {
   const news = useAppSelector(selectArticles);

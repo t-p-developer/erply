@@ -7,6 +7,7 @@ import {
   selectToken,
 } from './features/auth/authSlice';
 import { selectError as selectNewsError } from './features/news/newsSlice';
+import { Header } from './components/Header';
 
 function App() {
   const token = useAppSelector(selectToken);
@@ -18,15 +19,11 @@ function App() {
       <div className="wave" />
       <div className="wave" />
       <div className="wave" />
-      <header>
-        {token ? (
-          <button onClick={() => dispatch(removeCredentials())} type="button">
-            Log out
-          </button>
-        ) : (
-          'Welcome'
-        )}
-      </header>
+      <Header
+        token={token}
+        dispatch={dispatch}
+        removeCredentials={removeCredentials}
+      />
       {token ? <News /> : <Auth />}
       {authError && (
         <div className="error-container">
@@ -36,8 +33,8 @@ function App() {
       )}
       {newsError && (
         <div className="error-container">
-            <h3>{newsError.code}</h3>
-            <p>{newsError.message}</p>
+          <h3>{newsError.code}</h3>
+          <p>{newsError.message}</p>
         </div>
       )}
     </div>

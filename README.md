@@ -14,12 +14,21 @@ To download the application, you can follow these steps:
 
 Before running the application, make sure you have Node.js and npm (Node Package Manager) installed on your machine. Then, follow these steps to install the dependencies:
 
-1. Install the project dependencies using npm.
+```sh
+npm install
+```
 
 ## Run
 
-To run the application locally, execute the following command:
+```sh
+npm run dev
+```
 
+To run the application locally, execute the following command:
 
 This will start the development server. You can then access the application by opening your browser and navigating to `http://localhost:5173`.
 
+## Test
+
+```sh
+npm run test

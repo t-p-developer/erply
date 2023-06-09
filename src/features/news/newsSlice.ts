@@ -35,7 +35,7 @@ const initialState: ArticlesState = {
 
 export const fetchArticles = createAsyncThunk(
   'articles/fetchArticles',
-  async (token:string) => {
+  async (token: string) => {
     try {
       const response = await fetch(
         `https://newsapi.org/v2/everything?q=keyword&apiKey=${token}`,

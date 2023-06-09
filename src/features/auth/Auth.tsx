@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import {
-  LoginRequest,
-  setCredentials,
-  selectLoading,
-} from './authSlice';
+import { LoginRequest, setCredentials, selectLoading } from './authSlice';
 
 export function Auth() {
   const loading = useAppSelector(selectLoading);
